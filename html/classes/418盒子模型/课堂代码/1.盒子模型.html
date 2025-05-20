@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>盒模型</title>
+		<style type="text/css">
+		ol{
+			border: 1px solid red;
+		}
+		li{
+			margin:10px 30px;
+			border: 1px solid blue;
+			list-style: none;
+		}
+		
+		
+		
+		</style>
+	</head>
+	<body>
+		<!-- 1.认识盒子模型 -->
+		<ul>
+			<ol>
+				<style>
+				  .box{
+							width: 300px;
+							height: 200px;
+							border: 10px solid #FF0000;
+							padding: 30px;
+							margin: 40px;
+						}
+				</style>
+				<h3>1.认识盒子模型</h3>
+				<div class="box">
+					鲜衣怒马少年时，不负韶华行可知
+				</div>
+			</ol>
+		
+		</ul>
+		
+		<!-- 2.盒子模型相关属性 -->
+		<ul>
+			<ol>
+				<h3>2.盒子模型相关属性</h3>
+				<li>
+					<!-- 
+					(1)内容区域的宽度和高度 
+					px/%/rem/em
+					
+					 -->
+					<style>
+						  .box_px {
+						            width: 300px;
+						            height: 80px;
+						            background-color: #F7AF62;
+							}
+						.box_percent {
+							width: 50%;
+							height: 80px;
+							margin-top: 20px;
+							background-color: #B9FABC;
+						}
+					</style>
+					
+					<h4>(1)内容区域的宽度和高度</h4>
+					 <div class="box_px">志存高远方能登高望远，胸怀天下才可大展宏图。</div>
+					 <div class="box_percent"> 时代各有不同，青春一脉相承。</div>
+				</li>
+				<li>
+				<!-- 	
+					(2)边框 
+					1个属性值：表示4个属性值均相同；
+					2个属性值：第1个属性值代表上下边框样式，第2个属性值代表左右边框样式；
+					3个属性值：第1个属性值代表上边框样式，第2个属性代表左右边框样式，第3个属性代表下边框样式。
+					 -->
+					<style>
+						h6{
+							 border-bottom-style: double;
+						} /*下边框为双线*/
+						.p1{
+							border-style: solid;
+						} /*均为单实线*/
+						.p2{
+							border-style: solid dotted;
+						} /*上下单实线，左右点线*/
+						/*上为实线，左右点线，下为虚线*/
+						.p3{border-style: solid dotted dashed;}
+						/*上为单实线，右为点线，下为虚线，左为双线*/
+						.p4{border-style: solid dotted dashed double;}
+					</style>
+					
+					<h4>(2)边框-样式</h4>
+					<div style="width: 50%;text-align: center;margin-left: 0.625rem;">
+						<h6 >早发白帝城</h6>
+						<p class="p1">朝辞白帝彩云间，</p>
+						<p class="p2">千里江陵一日还。</p>
+						<p class="p3">两岸猿声啼不住，</p>
+						<p class="p4">轻舟已过万重山。</p>
+					</div>
+					<h4>(2)边框-宽度</h4>
+					<style>
+						.box1{border-width: 1px;margin: 0.625rem;}
+						.box2{border-style: solid;border-width: thin;margin: 0.625rem;}
+						.box3{border-style: solid;border-width: thick 1px;margin: 0.625rem;}
+						.box4{border-style: solid;border-top-width: 10px;margin: 0.625rem;}
+					</style>
+					<div>
+						<div class="box1">未定义边框样式，边框无效</div>
+						<div class="box2">4条边框宽度均为1px</div>
+						<div class="box3">上、下边框宽度1px，左、右边框宽度3px</div>
+						<div class="box4">上边框宽度10px，其他边框宽度取默认值</div>
+					</div>
+					<h4>(2)边框-颜色</h4>
+					<style>
+							 .div1 {
+							            width: 350px;
+							            height: 50px;
+							            margin-top: 10px;
+							            border-style: solid;
+							            border-width: 5px;
+							        }
+							.box5{border-color: red;}
+							.box6{border-color: #FF0000 #00FF00;}
+							.box7{border-bottom-color: rgb(255,0,0);}
+							.box8{border-color: rgba(255,0,0,0.3);}
+					</style>
+					<div>
+						 <div class="div1 box5">4条边框均为红色</div>
+						<div class="div1 box6">上、下边框为红色，左、右边框为绿色</div>
+						<div class="div1 box7">下边框为红色，其他边框颜色取默认值（黑色）</div>
+						<div class="div1 box8">4条边框宽度均为红色，颜色透明度0.3</div>
+					</div>
+					
+					<h4>(2)边框-综合设置</h4>
+					<style>
+							.div2{width: 350px;height: 50px;margin-top: 10px;}
+							.box9{border: 5px solid #FF0000;}
+							.box10{border: dotted}
+							.box11{border:5px #FF0000}
+							.box12{border-bottom: 5px solid #FF0000;}
+					</style>
+					<div>
+						<div class="div2 box9">4条边框宽度均为5px、红色、单实线</div>
+						<div class="div2 box10">4条边框宽度均为点线，宽度和颜色取默认值</div>
+						<div class="div2 box11">省略了边框样式属性，边框无效</div>
+						<div class="div2 box12">下边框为5px、红色、单实线</div>
+					</div>
+					
+					<h4>(2)边框-圆角</h4>
+					<style>
+							.div3{width: 300px;height: 70px;margin-top: 10px;margin-left: 10px;}
+							.box13{border: 1px solid #FF0000; border-radius: 8px;}
+							.box14{border: 1px solid #FF0000;border-radius:8px 20px;}
+							.box15{border: 1px solid #FF0000;border-top-left-radius: 15px}
+							img{border-radius: 10px;}
+					</style>
+					<div>
+						<div class="div3 box13">统一设置4个角的半径为8px</div>
+						<div class="div3 box14">左上角、右下角的半径为8px，左下角、右上角的半径为20px</div>
+						<div class="div3 box15">左上角的半径为15px，其他角不设置</div>
+						<div><img src="images/poster.jpg" alt=""></div>
+					</div>
+				</li>
+			</ol>
+			
+		</ul>
+		<!-- 3.内边距-->
+		<ul>
+			<ol>
+				<style>
+				  #div4 {
+					  width: 300px;
+					  height: 30px;
+					  border: 1px solid #000000;
+					  margin-top: 10px;
+				  }
+				  .box16{padding: 10px;}
+				  .box17{padding: 10px 20px}
+				  .box18{padding-left: 50%}
+				</style>
+				<h3>3.内边距</h3>
+				 <div id="div4">无内边距</div>
+				<div id="div4" class="box16">上、下、左、右内边距均为10px</div>
+				<div id="div4" class="box17">上、下内边距10px，左、右内边距20px</div>
+				<div id="div4" class="box18">左内边距为父元素的50%</div>
+			</ol>
+		
+		</ul>
+		<!-- 4.外边距-->
+		<!-- <ul>
+			<ol>
+				<style>
+				  #div4 {
+					  width: 300px;
+					  height: 30px;
+					  border: 1px solid #000000;
+					  margin-top: 10px;
+				  }
+				  .box16{padding: 10px;}
+				  .box17{padding: 10px 20px}
+				  .box18{padding-left: 50%}
+				</style>
+				<h3>4.外边距</h3>
+				 <div id="div4">无内边距</div>
+				<div id="div4" class="box16">上、下、左、右内边距均为10px</div>
+				<div id="div4" class="box17">上、下内边距10px，左、右内边距20px</div>
+				<div id="div4" class="box18">左内边距为父元素的50%</div>
+			</ol>
+		
+		</ul> -->
+	</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>外边距</title>
+    <style>
+        div {
+            width: 500px;
+            height: 40px;
+            border: 1px solid #000000;
+            margin-top: 10px;
+        }
+        .box1{margin: 10px;}
+        .box2{margin: 10px 20px}
+        .box3{margin-left: 50%}
+        .box4{margin: 10px auto}
+    </style>
+</head>
+<body>
+    <div>无外边距</div>
+    <div class="box1">上、下、左、右外边距均为10px</div>
+    <div class="box2">上、下外边距10px，左、右外边距20px</div>
+    <div class="box3">左外边距为父元素的50%</div>
+    <div class="box4">已设置盒子宽度前提下，通过左右外边距为auto实现盒子水平居中</div>
+</body>
+</html>

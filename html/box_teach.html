@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>新闻版块练习</title>
+    <style> 
+        /* / 重置所有元素的外边距和内边距为0 / */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* / 设置body的基本样式，包括字体大小和背景颜色 / */
+        body{
+            font-size: 16px;
+            background-color: #EBF0FA;
+        }
+        /* / 定义一个名为.box的样式类，用于页面中的主要容器，设置其宽度、高度、背景色、外边距和阴影效果 / */
+        .box{
+            width: 450px;
+            height: 230px;
+            background-color: #FFFFFF;
+            margin: 30px auto;
+            box-shadow: 5px 5px 20px 5px rgba(0,0,0,0.2);
+        }
+        /* / 定义页面标题的样式，包括高度、底部边框和外边距 / */
+        .title{
+            height: 40px;
+            border-bottom: 1px solid #d9d9d9;
+            margin: 10px;
+        }
+        /* / 定义标题名称的样式，包括宽度、字体大小、行高、颜色、粗细、底部边框和文本对齐方式 / */
+        .name{
+            width: 90px;
+            font-size: 18px;
+            line-height: 38px;
+            font-weight: bold;
+            color: #378de4;
+            text-align: center;
+            border-bottom: 2px solid #378de4;
+        }
+        /* / 定义列表项的样式，包括移除默认样式、设置高度、行高、背景图片、内边距左值 */
+        .list li{
+            list-style: none;
+            height: 35px;
+            line-height: 35px;
+            background: url("dot.png") no-repeat left center;
+            padding-left: 20px;
+        }
+   </style>
+</head>
+<body>
+    <div class="box">
+        <div class="title">
+            <div class="name">文化·书画</div>
+            <div class="list">
+               <ul>
+                   <li>马面裙爆火“出圈” 国潮如何焕发新魅力？</li>
+                   <li>殷墟博物馆新馆开馆</li>
+                   <li>“开学第一课”—— 非遗文化迎开学</li>
+                   <li>大雪：天人宁许巧，剪水作花飞</li>
+                   <li>数字技术遇见千年敦煌之美</li>
+               </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

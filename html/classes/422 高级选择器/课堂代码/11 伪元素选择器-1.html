@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>::before和::after</title>
+    <style>
+        .decorated-box::before {
+            content: "▶";
+            /* 使用Unicode字符添加一个播放图标 */
+            color: blue;
+            /* 设置图标颜色为蓝色 */
+            font-size: 1.5em;
+            /* 设置图标字体大小为1.5倍 */
+            margin-right: 5px;
+            /* 设置图标与内容的间距 */
+        }
+
+        .decorated-box::after {
+            content: "▲";
+            /* 使用Unicode字符添加一个向上的三角形 */
+            color: green;
+            /* 设置三角形颜色为绿色 */
+            font-size: 1.5em;
+            /* 设置三角形字体大小为1.5倍 */
+            margin-left: 5px;
+            /* 设置三角形与内容的间距 */
+        }
+    </style>
+</head>
+
+<body>
+    <p class="decorated-box">向未来张望的时光，或许孤独而漫长，希望努力过后，都是晴朗。</p>
+</body>
+
+</html>

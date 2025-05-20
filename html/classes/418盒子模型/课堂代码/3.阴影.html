@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>阴影参数对比</title>
+    <style>
+        p{width: 70px;height: 70px;display: inline-block;margin: 15px;}
+        /*水平阴影的偏移量对比*/
+        .p1{box-shadow: -10px 0 10px 10px rgba(0,0,0,0.2)}
+        .p2{box-shadow: 0 0 10px 10px rgba(0,0,0,0.2)}
+        .p3{box-shadow: 10px 0 10px 10px rgba(0,0,0,0.2)}
+        /*垂直阴影的偏移量对比*/
+        .p4{box-shadow: 0 -10px 10px 10px rgba(0,0,0,0.2)}
+        .p5{box-shadow: 0 0 10px 10px rgba(0,0,0,0.2)}
+        .p6{box-shadow: 0 10px 10px 10px rgba(0,0,0,0.2)}
+        /*阴影的模糊程度对比*/
+        .p7{box-shadow: 0 0 0 10px rgba(0,0,0,0.2)}
+        .p8{box-shadow: 0 0 10px 10px rgba(0,0,0,0.2)}
+        .p9{box-shadow: 0 0 20px 10px rgba(0,0,0,0.2)}
+        /*阴影的扩展半径对比*/
+        .p10{box-shadow: 0 0 10px 0 rgba(0,0,0,0.2)}
+        .p11{box-shadow: 0 0 10px 10px rgba(0,0,0,0.2)}
+        .p12{box-shadow: 0 0 10px 20px rgba(0,0,0,0.2)}
+    </style>
+</head>
+<body>
+
+    <h4>水平阴影的偏移量对比 box-shadow: x-shadow 0 10px 10px rgba(0, 0, 0, 0.2);</h4>
+    <p class="p1">-10px</p>
+    <p class="p2">0</p>
+    <p class="p3">10px</p>
+    <hr>
+    <h4>垂直阴影的偏移量对比 box-shadow: 0 y-shadow 10px 10px rgba(0, 0, 0, 0.2);</h4>
+    <p class="p4">-10px</p>
+    <p class="p5">0</p>
+    <p class="p6">10px</p>
+    <hr>
+    <h4>阴影的模糊程度对比 box-shadow: 0 0 blur 10px rgba(0, 0, 0, 0.2);</h4>
+    <p class="p7">0</p>
+    <p class="p8">10px</p>
+    <p class="p9">20px</p>
+    <hr>
+    <h4>阴影的扩展半径对比 box-shadow: 0 0 10px spread rgba(0, 0, 0, 0.2);</h4>
+    <p class="p10">0</p>
+    <p class="p11">10px</p>
+    <p class="p12">20px</p>
+</body>
+</html>

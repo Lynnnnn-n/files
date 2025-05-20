@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>盒模型</title>
+		<style type="text/css">
+		ol{
+			border: 1px solid red;
+		}
+		li{
+			margin:10px 30px;
+			border: 1px solid blue;
+			list-style: none;
+		}
+		
+		
+		
+		</style>
+	</head>
+	<body>
+		<!-- 1.认识盒子模型 -->
+		<ul>
+			<ol>
+				<style>
+				  .box{
+							width: 300px;
+							height: 200px;
+							border: 10px solid #FF0000;
+							padding: 30px;
+							margin: 40px;
+						}
+				</style>
+				<h3>1.认识盒子模型</h3>
+				<div class="box">
+					鲜衣怒马少年时，不负韶华行可知
+				</div>
+			</ol>
+		
+		</ul>
+		
+		<!-- 2.盒子模型相关属性 -->
+		<ul>
+			<ol>
+				<h3>2.盒子模型相关属性</h3>
+				<li>
+					<!-- 
+					(1)内容区域的宽度和高度 
+					px/%/rem/em
+					
+					 -->
+					<style>
+						
+					</style>
+					
+					<h4>(1)内容区域的宽度和高度</h4>
+					志存高远方能登高望远，胸怀天下才可大展宏图。
+					  时代各有不同，青春一脉相承。
+				</li>
+				<li>
+				<!-- 	
+					(2)边框 
+					1个属性值：表示4个属性值均相同；
+					2个属性值：第1个属性值代表上下边框样式，第2个属性值代表左右边框样式；
+					3个属性值：第1个属性值代表上边框样式，第2个属性代表左右边框样式，第3个属性代表下边框样式。
+					 -->
+					<style>
+					
+					</style>
+					
+					<h4>(2)边框-样式</h4>
+					<div style="width: 50%;text-align: center;margin-left: 0.625rem;">
+						早发白帝城
+						朝辞白帝彩云间，
+						千里江陵一日还。
+						两岸猿声啼不住，
+						轻舟已过万重山。
+					</div>
+					<h4>(2)边框-宽度</h4>
+					<style>
+						
+					</style>
+					<div>
+						未定义边框样式，边框无效
+						4条边框宽度均为1px
+						上、下边框宽度1px，左、右边框宽度3px
+						上边框宽度10px，其他边框宽度取默认值
+					</div>
+					<h4>(2)边框-颜色</h4>
+					<style>
+							
+					</style>
+					<div>
+						 4条边框均为红色
+						上、下边框为红色，左、右边框为绿色
+						下边框为红色，其他边框颜色取默认值（黑色）
+						4条边框宽度均为红色，颜色透明度0.3
+					</div>
+					
+					<h4>(2)边框-综合设置</h4>
+					<style>
+							
+					</style>
+					<div>
+						4条边框宽度均为5px、红色、单实线
+						4条边框宽度均为点线，宽度和颜色取默认值
+						省略了边框样式属性，边框无效
+						下边框为5px、红色、单实线
+					</div>
+					
+					<h4>(2)边框-圆角</h4>
+					<style>
+						
+					</style>
+					<div>
+						统一设置4个角的半径为8px
+						左上角、右下角的半径为8px，左下角、右上角的半径为20px
+						左上角的半径为15px，其他角不设置
+						<div><img src="images/poster.jpg" alt=""></div>
+					</div>
+				</li>
+			</ol>
+			
+		</ul>
+		<!-- 3.内边距-->
+		<ul>
+			<ol>
+				<style>
+				
+				</style>
+				<h3>3.内边距</h3>
+				 无内边距</div>
+				上、下、左、右内边距均为10px
+				上、下内边距10px，左、右内边距20px
+				左内边距为父元素的50%
+			</ol>
+		
+		</ul>
+		<!-- 4.外边距-->
+		<!-- <ul>
+			<ol>
+				<style>
+				  #div4 {
+					  width: 300px;
+					  height: 30px;
+					  border: 1px solid #000000;
+					  margin-top: 10px;
+				  }
+				  .box16{padding: 10px;}
+				  .box17{padding: 10px 20px}
+				  .box18{padding-left: 50%}
+				</style>
+				<h3>4.外边距</h3>
+				 <div id="div4">无内边距</div>
+				<div id="div4" class="box16">上、下、左、右内边距均为10px</div>
+				<div id="div4" class="box17">上、下内边距10px，左、右内边距20px</div>
+				<div id="div4" class="box18">左内边距为父元素的50%</div>
+			</ol>
+		
+		</ul> -->
+	</body>
+</html>

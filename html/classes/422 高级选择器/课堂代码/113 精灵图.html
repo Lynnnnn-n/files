@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CSS精灵图</title>
+    <style>
+        div {
+            background: url('images/sprite.png') no-repeat top left;
+            width: 32px;
+            height: 32px;
+            display: inline-block;
+            margin-left: 20px;
+        }
+        .collect {background-position:-42px 0;}
+        .collect:hover {background-position:0 0;}
+        .user {background-position:-126px 0;}
+        .user:hover {background-position:-84px 0;}
+        .shopping_cart {background-position:-210px 0;}
+        .shopping_cart:hover {background-position:-168px 0;}
+    </style>
+</head>
+<body>
+<div class='collect'></div>
+<div class='shopping_cart'></div>
+<div class='user'></div>
+</body>
+</html>
