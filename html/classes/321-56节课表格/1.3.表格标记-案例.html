@@ -8,16 +8,16 @@
 				text-align: center;
 			}
 
-			#bg {
+			.bg {
 				background: #E0E0E0;
 			}
 		</style>
 	</head>
 	<body>
-		<table width="700" height="150px" border="1" align="center">
-			<!-- 表格标题 -->
+		<table width="700px" height="150px" border="1px" align="center" bordercolor="red">
 			<caption><strong>2012软件工程班课程表</strong></caption>
 			<tr>
+				<th>时间</th>
 				<th>节次</th>
 				<th>星期一</th>
 				<th>星期二</th>
@@ -25,7 +25,8 @@
 				<th>星期四</th>
 				<th>星期五</th>
 			</tr>
-			<tr id="bg">
+			<tr class="bg">
+				<th rowspan="2">上午</th>
 				<td>第1-2节</td>
 				<td>Java程序设计</td>
 				<td>Web前端开发技术</td>
@@ -33,7 +34,15 @@
 				<td>数据结构</td>
 				<td>体育</td>
 			</tr>
+			<tr class="bg">
+				<td>第3-4节</td>
+				<td>Java程序设计</td>
+				<td>Web前端开发技术</td>
+				<td>数字逻辑电路</td>
+				<td>数据结构</td>
+				<td>体育</td>
 			<tr>
+				<td>下午</td>
 				<td>第3-4节</td>
 				<td>心理咨询</td>
 				<td>线性代数</td>

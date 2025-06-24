@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<style type="text/css">	
+
+
+ul{
+  list-style: none;
+}
+</style>
+<meta charset="utf-8">
+<title>问卷调查</title>
+</head>
+
+<body>
+<form method="post" enctype="multipart/form-data" name="form1" id="form1">
+  <fieldset>
+	<h3>问卷调查</h3>
+	<h4>个人信息</h4>
+	  <ul>
+		<li>姓名：<input type="text" name="user_na" id="user_na" required placeholder="请输入姓名">
+		  *</li>
+		<li>身份证号码：<input type="text" name="user_num" id="user_num" required placeholder="请输入身份证号码">
+		  *</li>
+		<li>行业：<select id="major" name="major">
+			<option value="specialty1">数字媒体技术</option>
+			<option value="specialty2" selected>计算机</option>
+			<option value="specialty3">物联网</option>
+			</select>
+		  *</li>
+		<li>填写日期：<input type="datetime-local" name="user_num" id="user_num" required>
+		  *</li>
+	    <h5>1.平均消费是</h5>
+		<li><input type="radio" name="consumption" id="consumption0" value="con0">800～1000</li>
+		<li><input type="radio" name="consumption" id="consumption1" value="con1">1000～1500</li>  
+	    <h5>2.生活费支出(可多选)</h5>
+		<li><input type="checkbox" name="source_origin" id="origin0" value="ori0">全部用来吃</li>
+		<li><input type="checkbox" name="source_origin" id="origin1" value="ori1">部分用来吃饭</li>  
+		<h4><input type="submit" value="提交答案">&nbsp;&nbsp;<input type="reset" value="重新填写"></h4> 
+	  </ul>
+  </fieldset>
+</form>
+</body>
+</html>

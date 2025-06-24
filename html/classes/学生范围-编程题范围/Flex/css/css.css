@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.news_container{
+    display: flex;
+    /*width: 80%;*/
+    margin: 20px;
+    justify-content: space-between;
+}
+
+.news{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #AF2743;
+    color: #FFFFFF;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 10px;
+    flex-basis: 300px;
+}
+.news img{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.news p{
+    padding: 20px;
+    line-height: 1.5em;
+}

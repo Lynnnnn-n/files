@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>页面综合布局</title>
+<style type="text/css" >
+body{
+ margin:0px;
+ padding:0px;
+ font-size:18px;
+ text-align: center;
+}
+#wrap{
+ width:800px;
+ margin:0px auto;
+}
+#header{
+ height:120px;
+ width: 100%;
+ border:solid 1px #0000FF;
+ background:url("images/top.png");
+}  
+.div2{
+ font-size: 46px;
+ font-family: "华文隶书";
+ text-align:right;	
+ line-height: 80px;
+ color: crimson;
+}
+		
+  /*
+	1、在#container中设置“position:relative;”，
+	其作用是使得后面的绝对定位的基准为#container而不是以浏览器为其准。
+	2、左侧列#left_side和右侧#right_side列采用绝对定位，
+	并且固定这两个div的宽度，
+	而中间列#content由于需要根据浏览器自动调整，
+  */
+#container{
+ position: relative; /*相对定位*/
+ height: 400px;
+ top: 3px;
+}
+#left_side{
+ position:absolute;/*绝对定位*/
+ top:0px;
+ left:0px;
+ border:solid 1px #0000FF;
+ width:170px;
+ height:100%;
+ background: #B8B4B4; 
+}
+#content{
+ margin:0px 190px;
+ border:solid 1px red;
+ height:100%;
+ box-shadow: 0px 0px 8px 2px rgba(20,160,60,0.5);
+}
+#right_side{
+ position:absolute;
+ top:0px;
+ right:0px;
+ border:solid 1px #0000FF;
+ width:170px;
+ height:100%;
+ background: #B8B4B4;
+ 
+}
+#footer{
+ margin-top:10px;
+ height:80px;
+ border:solid 1px #0000FF;
+ 
+ line-height: 80px;
+ background:#E2DCDD;
+ 
+}
+#content div{
+ background:#F4DBDC;
+}
+#divCss{
+ border: red 1px solid;
+ height:auto !important; 
+ min-height:200px; /*假定最低高度是200px*/
+ top: 10px;
+ float: left;
+ position: relative;
+}
+.divCss1{
+ width: 35%;
+ left: 5px; 		
+}
+.divCss2{ 
+ width: 26%;
+ left: 10px; 	
+}
+.divCss3{
+ width:32%;
+ left: 16px; 	
+}
+p{  
+ clear:both;
+ position: relative;
+ top: 15px;
+ left: 5px;
+}
+.thumbnail {
+ float:left;
+ width:90px;
+ height:140px;
+ margin-top:5px;
+ margin-left: 8px;
+ margin-right: 4px;
+ border-radius:12px 0px; /*左上右下圆角*/
+ border: 1px solid red; 
+}
+</style>
+</head>
+<body>
+<div id="wrap">
+ <div id="header">
+  <div class="div2">综合页面布局</div>
+ </div>
+ <div id="container">
+  <div id="left_side">left_side</div>
+  <div id="content">
+   <div class="divCss1" id="divCss">左边</div>
+   <div class="divCss2" id="divCss">中间</div>
+   <div class="divCss3" id="divCss">右边</div>
+   <p>图片盒模型布局</p>
+   <img class="thumbnail" src="images/img1.png">
+   <img class="thumbnail" src="images/img2.png">
+   <img class="thumbnail" src="images/img4.png">
+   <img class="thumbnail" src="images/img6.png">
+  </div>
+  <div id="right_side">right-side</div>
+ </div>
+ <div id="footer">footer</div>
+</div>
+</body>
+</html>
